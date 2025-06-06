@@ -98,8 +98,8 @@ void main() async {
   await jsonFile.writeAsString(jsonPedido);
   print('✅ Arquivo pedido.json criado!');
 
-  final String username = 'jardel.araujo03@aluno.ifce.edu.br';
-  final String password = 'htzl mlhb zpkk lqdn'; 
+  final String username = 'e-mail';
+  final String password = 'senha app google'; 
   final smtpServer = gmail(username, password);
 
   final attachment = FileAttachment(jsonFile)
@@ -108,7 +108,7 @@ void main() async {
 
   final message = Message()
     ..from = Address(username, 'Jardel Araujo')
-    ..recipients.add('jardel.araujo03@aluno.ifce.edu.br')
+    ..recipients.add('taveira@ifce.edu.br')
     ..subject = 'Arquivo JSON do Pedido'
     ..text = '''
 Segue em anexo o arquivo JSON gerado pelo sistema.
