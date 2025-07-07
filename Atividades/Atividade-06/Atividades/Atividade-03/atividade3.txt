@@ -1,0 +1,28 @@
+import 'dart:io';
+import 'dart:async';
+import 'dart:isolate';
+
+void main() async {
+  print('Meu nome é Jardel'); 
+  final receivePort = ReceivePort();
+  await Isolate.spawn(doAsyncOperation, receivePort.sendPort);
+
+  print('Iniciando outras tarefas...');
+  await Future.delayed(Duration(seconds: 1));
+  print('Continuando outras tarefas...');
+
+  final result = await receivePort.first;
+  print('Resultado da operação assíncrona:');
+  print(result);
+
+  print('Execução finalizada.');
+}
+
+void doAsyncOperation(SendPort sendPort) async {
+  final file = File('./atividade3PDM.txt');
+  if (!await file.exists()) {
+    await file.writeAsString('Este é o conteúdo do arquivo de exemplo.');
+  }
+  final result = await file.readAsString();
+  sendPort.send(result);
+}

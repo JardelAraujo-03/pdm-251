@@ -1,0 +1,9 @@
+name: exercicio_prova
+description: Um programa Dart para enviar e-mails via SMTP
+version: 1.0.0
+
+environment:
+  sdk: ^3.7.0
+
+dependencies:
+  mailer: ^5.0.0
