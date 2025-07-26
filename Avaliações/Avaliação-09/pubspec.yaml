@@ -1,0 +1,26 @@
+name: lista_usuarios_api
+description: Um app Flutter que consome uma API REST e exibe usuários em uma ListView.
+publish_to: 'none' # O projeto não será publicado no pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0' # Ajuste para sua versão do Dart/Flutter
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.4.0
+
+  # Suporte para Material Design
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    # Adicione imagens ou arquivos se necessário
+    # - assets/images/
