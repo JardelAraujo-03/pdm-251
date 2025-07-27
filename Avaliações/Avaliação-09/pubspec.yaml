@@ -1,26 +1,25 @@
-name: lista_usuarios_api
-description: Um app Flutter que consome uma API REST e exibe usuários em uma ListView.
-publish_to: 'none' # O projeto não será publicado no pub.dev
+name: avaliacao_09
+description: Um app Flutter que simula consumo de API tipo Mercado Livre.
+publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.3.0 <4.0.0' # Ajuste para sua versão do Dart/Flutter
+  sdk: '>=3.3.0 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-  http: ^1.4.0
-
-  # Suporte para Material Design
+  http: ^1.1.0
   cupertino_icons: ^1.0.6
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^6.0.0
 
 flutter:
   uses-material-design: true
 
-  assets:
-    # Adicione imagens ou arquivos se necessário
-    # - assets/images/
+  # Se quiser usar imagens locais no futuro:
+  # assets:
+  #   - assets/images/
